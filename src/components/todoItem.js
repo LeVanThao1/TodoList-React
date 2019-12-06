@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import './todoItem.css';
 class TodoItem extends Component {
     render() {
+        const { item } = this.props;
+        let className = "TodoItem ";
+        if (item.isComplete) {
+            className += " TodoItemComplete";
+        }
         return (
-            <div className="TodoItem">
-                <input type="checkbox" className="input" onClick={}></input><span>{ this.props.title }</span>
+            <div className={ className }>
+                <input type="checkbox" className="input"></input><span>{ item.title }</span>
             </div>
         )
     }
