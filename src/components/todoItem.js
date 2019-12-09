@@ -1,15 +1,35 @@
 import React, { Component } from 'react';
 import './todoItem.css';
+import classNames from 'classnames'
+import check from '../img/verified.svg'
+import checkDone from '../img/success.svg'
+
 class TodoItem extends Component {
     render() {
-        const { item } = this.props;
-        let className = "TodoItem ";
+        const { item, onClicked, cases } = this.props;
+        let urlImage = check;
         if (item.isComplete) {
-            className += " TodoItemComplete";
+            urlImage = checkDone
+        }
+        if (cases === "Active") {
+            return (
+                !item.isComplete && <div className={ classNames("TodoItem", { TodoItemComplete: item.isComplete })}>
+                <img src={urlImage} width={32} onClick = {onClicked}></img>
+                <p>{ item.title }</p>
+                </div>
+            )
+        } else if (cases === "Completed") {
+            return (
+                item.isComplete && <div className={ classNames("TodoItem", { TodoItemComplete: item.isComplete })}>
+                <img src={urlImage} width={32} onClick = {onClicked}></img>
+                <p>{ item.title }</p>
+                </div>
+            )
         }
         return (
-            <div className={ className }>
-                <input type="checkbox" className="input"></input><span>{ item.title }</span>
+            <div className={ classNames("TodoItem", { TodoItemComplete: item.isComplete })}>
+                <img src={urlImage} width={32} onClick = {onClicked}></img>
+                <p>{ item.title }</p>
             </div>
         )
     }

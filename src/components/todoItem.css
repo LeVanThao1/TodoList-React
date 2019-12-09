@@ -1,14 +1,21 @@
 .TodoItem {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 22px;
     color: #4d4d4d;
+    margin: 0;
+    padding: 0px 15px;
+    border-bottom: 1px solid #bebebe;
+    display: flex;
 }
 
-.TodoItemComplete {
+.TodoItem:last-child {
+    border: none;
+}
+.TodoItem > p {
+    padding-left: 20px;
+}
+.TodoItemComplete > p{
     opacity: .3;
     text-decoration: line-through;
-}
-.input {
-    display: inline-block;
 }
