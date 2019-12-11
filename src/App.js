@@ -17,6 +17,7 @@ class App extends Component {
       ],
       defaultAll : false
     };
+    this.inputElement = React.createRef();
     this.onAddItem = this.onAddItem.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onClickAll = this.onClickAll.bind(this);
@@ -25,6 +26,11 @@ class App extends Component {
     this.onClickSelectCompleted = this.onClickSelectCompleted.bind(this);
     this.onClickClear = this.onClickClear.bind(this);
   }
+
+  componentDidMount () {
+    this.inputElement.current.focus();
+  }
+
   onClickedItem (item) {
     return (event) => {
       const isComplete = item.isComplete;
@@ -107,10 +113,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
         <div className="Header">
           <img src={tick} width={32} onClick={this.onClickAll}></img>
-          <input type="text" value={this.emptyItem} placeholder="What need to be done ?" onChange={this.onChange} onKeyUp={this.onAddItem} className={classNames({focusing: this.state.emptyItem !== ""})} ></input>
+          <input type="text" 
+            value={this.emptyItem} 
+            placeholder="What need to be done ?" 
+            onChange={this.onChange} 
+            onKeyUp={this.onAddItem} 
+            className={classNames({focusing: this.state.emptyItem !== ""})}
+            ref={this.inputElement}  
+          />
         </div>
         {
           this.state.TodoList.length > 0 && this.state.TodoList.map((item, index) => 
