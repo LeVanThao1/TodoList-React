@@ -59,21 +59,17 @@ class App extends Component {
           ...this.state.TodoList
         ]
       });
-    } else {
-      this.setState({
-        emptyItem: ""
-      });
-    }
+      event.target.value = "";
+    } 
   }
 
   onChange(event) {
     this.setState({
-      emptyItem: ""
-    })
+      emptyItem: event.target.value
+    });
   }
 
   onClickAll() {
-    console.log(this.state.defaultAll)
     this.setState({
       TodoList: this.state.TodoList.map(item => {
         item.isComplete = !this.state.defaultAll;
@@ -114,7 +110,7 @@ class App extends Component {
         
         <div className="Header">
           <img src={tick} width={32} onClick={this.onClickAll}></img>
-          <input type="text" value={this.emptyItem} placeholder="What need to be done ?" onChange={this.onChange} onKeyUp={this.onAddItem} className={classNames({focusing: this.state.emptyItem !== ""})}></input>
+          <input type="text" value={this.emptyItem} placeholder="What need to be done ?" onChange={this.onChange} onKeyUp={this.onAddItem} className={classNames({focusing: this.state.emptyItem !== ""})} ></input>
         </div>
         {
           this.state.TodoList.length > 0 && this.state.TodoList.map((item, index) => 
