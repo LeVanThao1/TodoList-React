@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/levanthao1.github.io/TodoList-React/static/css/main.09879768.chunk.css",
+    "main.js": "/levanthao1.github.io/TodoList-React/static/js/main.58ecb4e6.chunk.js",
+    "main.js.map": "/levanthao1.github.io/TodoList-React/static/js/main.58ecb4e6.chunk.js.map",
+    "runtime-main.js": "/levanthao1.github.io/TodoList-React/static/js/runtime-main.627898b6.js",
+    "runtime-main.js.map": "/levanthao1.github.io/TodoList-React/static/js/runtime-main.627898b6.js.map",
+    "static/js/2.b2649fd7.chunk.js": "/levanthao1.github.io/TodoList-React/static/js/2.b2649fd7.chunk.js",
+    "static/js/2.b2649fd7.chunk.js.map": "/levanthao1.github.io/TodoList-React/static/js/2.b2649fd7.chunk.js.map",
+    "index.html": "/levanthao1.github.io/TodoList-React/index.html",
+    "precache-manifest.a71e0264687027c31e0d12958594ca98.js": "/levanthao1.github.io/TodoList-React/precache-manifest.a71e0264687027c31e0d12958594ca98.js",
+    "service-worker.js": "/levanthao1.github.io/TodoList-React/service-worker.js",
+    "static/css/main.09879768.chunk.css.map": "/levanthao1.github.io/TodoList-React/static/css/main.09879768.chunk.css.map",
+    "static/js/2.b2649fd7.chunk.js.LICENSE": "/levanthao1.github.io/TodoList-React/static/js/2.b2649fd7.chunk.js.LICENSE",
+    "static/media/success.svg": "/levanthao1.github.io/TodoList-React/static/media/success.d29f1779.svg",
+    "static/media/tick-sign.svg": "/levanthao1.github.io/TodoList-React/static/media/tick-sign.0e561df1.svg",
+    "static/media/verified.svg": "/levanthao1.github.io/TodoList-React/static/media/verified.7a0423bd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.627898b6.js",
+    "static/js/2.b2649fd7.chunk.js",
+    "static/css/main.09879768.chunk.css",
+    "static/js/main.58ecb4e6.chunk.js"
+  ]
+}
