@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent, memo } from 'react';
 import './todoItem.css';
 import classNames from 'classnames';
 import check from '../img/verified.svg';
 import checkDone from '../img/success.svg';
 import PropTypes from 'prop-types';
 
-class TodoItem extends Component {
+class TodoItem extends PureComponent {
     render() {
         const { item, onClicked, cases } = this.props;
         let urlImage = check;
@@ -43,4 +43,4 @@ TodoItem.propTypes = {
     }),
     onClick: PropTypes.func
 }
-export default TodoItem;
+export default memo(TodoItem);
